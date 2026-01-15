@@ -8,7 +8,7 @@ static int nonRep(String str) {
         if (fI[str.charAt(i)] == -1)
             fI[str.charAt(i)] = i;
         else
-            fI[str.charAt(i)] = -2;
+            fI[str.charAt(i)] = -2;  // time complexity = O(n);
     }
 
     int res = Integer.MAX_VALUE;
@@ -19,3 +19,7 @@ static int nonRep(String str) {
 
     return (res == Integer.MAX_VALUE) ? -1 : res;
 }
+
+// this is the optimized approach 
+// this in we used a array  of all ASCII character 256 and then runn the loop 
+// for seen -1; repeated =-2 and first occurence the element index
